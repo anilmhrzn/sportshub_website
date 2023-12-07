@@ -1,3 +1,4 @@
+
 var i = 0;
 var limit;
 window.onload = function abc() {
@@ -8,11 +9,12 @@ window.onload = function abc() {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       limit = parseInt(this.responseText);
+
     }
   };
   xhttp.open(
-    "GET",
-    "./files-for-main-content/no_of_popular_products.php",
+    "GET","http://localhost/sportshub/pages/files-for-main-content/no_of_popular_products.php"
+    ,
     true
   );
   xhttp.send();
@@ -38,7 +40,7 @@ function loadHomePage() {
       document.getElementById("main-page").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "./../pages/main-page.php", true);
+  xhttp.open("GET", "http://localhost/sportshub/pages/main-page.php", true);
   xhttp.send();
   loadPopularPicks();
   document
@@ -57,7 +59,7 @@ function loadPopularPicks() {
   };
   xhttp.open(
     "GET",
-    "./files-for-main-content/fetch_for_popular_picks.php?currentPage=" + 0,
+    "http://localhost/sportshub/pages/files-for-main-content/fetch_for_popular_picks.php?currentPage=" + 0,
     true
   );
   xhttp.send();

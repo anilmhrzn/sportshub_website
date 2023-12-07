@@ -53,6 +53,14 @@
     </div>
 </footer>
 </body>
+<!-- <script>$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+}); -->
+</script>
+<script src="./../code.jquery.com_jquery-3.7.1.min.js"></script>
 <script src="./../javascript/script.js"></script>
-<script src="./../../jquery-3.6.0.min.js"></script>
+<!-- <script src="./../javascript/script.js"></script> -->
+<!-- <script src="./../../jquery-3.6.0.min.js"></script> -->
 </html>

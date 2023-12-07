@@ -1,11 +1,14 @@
 <?php
+// phpinfo();
+
 $currentPage = $_GET['currentPage'];
+include('/var/www/html/sportshub/includes/db_config.php');
 
-
-$conn = mysqli_connect('localhost', 'root', '', 'sportshub_db');
-if ($conn->connect_error) {
-    die('connection failed' . $conn->connect_error);
-}
+// include 'http://localhost/sportshub/includes/db_config.php';
+// $conn = mysqli_connect('localhost', 'root', '@ppleb@ll', 'sportshub_db');
+// if ($conn->connect_error) {
+//     die('connection failed' . $conn->connect_error);
+// }
 $fetchPopularTrue = "SELECT * from products where popular=1 limit $currentPage,1";
 $result = mysqli_query($conn, $fetchPopularTrue);
 if (mysqli_num_rows($result) > 0) {
